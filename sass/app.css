@@ -1,0 +1,21 @@
+body header {
+  background: #31c27c;
+  height: 44px; }
+  body header img {
+    height: 25px;
+    margin: 9px 10px; }
+  body header a {
+    float: right;
+    font-size: 14px;
+    margin: 9px 10px;
+    text-decoration: none;
+    background: #149c5a;
+    padding: 4px 12px;
+    border-radius: 10px;
+    color: #fff; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+/*# sourceMappingURL=app.css.map */

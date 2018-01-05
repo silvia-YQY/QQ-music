@@ -1,0 +1,24 @@
+body{
+	header{
+		background:$header-background;
+		height:$header-height;
+
+
+		img{
+			height:25px;
+			margin:9px 10px;
+		}
+
+		a{
+			float:right;
+			font-size:14px;
+			margin:9px 10px;
+			text-decoration:none;
+			background:$header-downLoad-Color;
+			padding:4px 12px;
+			border-radius:10px;
+			color:#fff;
+		}
+
+	}
+}
