@@ -1,0 +1,19 @@
+body{
+	nav{
+		color:$nav-color;
+		background:#fff;
+		ul{
+			display:flex;
+			width:100%;
+			justify-content:space-between;
+			height:40px;
+			line-height:40px;
+			li{
+				width:33.33%;
+				text-align:center;
+			}
+			
+		}
+
+	}
+}

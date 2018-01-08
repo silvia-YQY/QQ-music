@@ -14,8 +14,51 @@ body header {
     border-radius: 10px;
     color: #fff; }
 
+.carousel {
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .carousel .img-ct {
+    width: 500%;
+    display: flex;
+    transition: 0.3s; }
+  .carousel li > a img {
+    width: 100%; }
+
+.link {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  font-size: 0;
+  text-align: center; }
+  .link > li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer; }
+
+body nav {
+  color: rgba(0, 0, 0, 0.6);
+  background: #fff; }
+  body nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 40px;
+    line-height: 40px; }
+    body nav ul li {
+      width: 33.33%;
+      text-align: center; }
+
 * {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  list-style: none; }
+
+body {
+  background: #f4f4f4; }
 
 /*# sourceMappingURL=app.css.map */
