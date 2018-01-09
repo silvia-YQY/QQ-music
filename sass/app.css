@@ -11,7 +11,7 @@ body header {
     text-decoration: none;
     background: #149c5a;
     padding: 4px 12px;
-    border-radius: 10px;
+    border-radius: 15px;
     color: #fff; }
 
 .carousel {
@@ -40,25 +40,30 @@ body header {
     margin: 0 5px;
     cursor: pointer; }
 
-body nav {
+.navbar {
   color: rgba(0, 0, 0, 0.6);
   background: #fff; }
-  body nav ul {
+  .navbar ul {
     display: flex;
     width: 100%;
     justify-content: space-between;
     height: 40px;
     line-height: 40px; }
-    body nav ul li {
+    .navbar ul li {
       width: 33.33%;
       text-align: center; }
+      .navbar ul li.active {
+        color: #31c27c;
+        border-bottom: 2px solid #31c27c; }
 
 * {
   padding: 0;
-  margin: 0;
-  list-style: none; }
+  margin: 0; }
 
 body {
   background: #f4f4f4; }
+
+ul, li {
+  list-style: none; }
 
 /*# sourceMappingURL=app.css.map */

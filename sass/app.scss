@@ -2,16 +2,20 @@
 @import "header";
 @import "carousel";
 @import "nav";
+@import "helper";
 
 
 *{
 	padding:0;
 	margin:0;
-	list-style:none;
 }
 
 body{
 	background:#f4f4f4;
+}
+
+ul,li{
+	list-style:none;
 }
 
 

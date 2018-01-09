@@ -11,33 +11,32 @@
 		<img src="./img/logo.png" alt="">
 		<a href="#">下载APP</a>
 	</header>
-	<nav>
-		<ul>
-			<li>推荐</li>
-			<li>排行榜</li>
-			<li>搜索</li>
+	<nav class="navbar">
+		<ul class="nav-list">
+			<li class="nav-item active" data-role="tab" data-view=".rec-view">推荐</li>
+			<li class="nav-item" data-role="tab" data-view=".rank-view">排行榜</li>
+			<li class="nav-item" data-role="tab" data-view=".search-view">搜索</li>
 		</ul>
 	</nav>
-	<div class="carousel" id="slider">
-	  <!-- <ul class="img-ct">
-	    <li><a href="#"><img src="img/C1.jpg"></a></li>
-	    <li><a href="#"><img src="img/C2.jpg"></a></li>
-	    <li><a href="#"><img src="img/C3.jpg"></a></li>
-	    <li><a href="#"><img src="img/C4.jpg"></a></li>
-	    <li><a href="#"><img src="img/C5.jpg"></a></li>
-	  </ul> -->
+	<div class="tab-contents">
+		<div class="rec-view tab-content">
+			<div class="carousel" id="slider">
+			</div>
+		</div>
 
-<!-- 下标 -->
-<!-- 	  <ul class="link">
-	    <li class = "active"></li>
-	    <li></li>
-	    <li></li>
-	    <li></li>
-	  </ul> -->
+		<div class="rank-view tab-content hide">
+			排行榜
+		</div>
+		<div class="search-view tab-content hide">
+			搜索
+		</div>
 	</div>
+	
+	
 
 	<script src="JS/carousel.js"></script>
 	<script src="JS/app.js"></script>
+	<script src="JS/tab.js"></script>
 
 
 </body>
