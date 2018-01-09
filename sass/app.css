@@ -56,6 +56,22 @@ body header {
         color: #31c27c;
         border-bottom: 2px solid #31c27c; }
 
+.radios {
+  margin: 14px 10px 10px; }
+  .radios .title {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 11px;
+    font-weight: normal; }
+  .radios .list {
+    display: flex;
+    flex: wrap; }
+    .radios .list .list-item {
+      flex: 1; }
+      .radios .list .list-item img {
+        width: 100%;
+        display: block; }
+
 * {
   padding: 0;
   margin: 0; }
@@ -63,7 +79,13 @@ body header {
 body {
   background: #f4f4f4; }
 
-ul, li {
+ul, ol {
+  list-style: none;
+  padding: 0;
   list-style: none; }
+
+h1, h2 {
+  margin: 0;
+  font-weight: normal; }
 
 /*# sourceMappingURL=app.css.map */

@@ -3,6 +3,8 @@
 @import "carousel";
 @import "nav";
 @import "helper";
+@import "rec";
+
 
 
 *{
@@ -14,8 +16,15 @@ body{
 	background:#f4f4f4;
 }
 
-ul,li{
+ul,ol{
 	list-style:none;
+	padding: 0;
+	list-style: none;
+}
+
+h1,h2{
+	margin:0;
+	font-weight: normal;
 }
 
 
