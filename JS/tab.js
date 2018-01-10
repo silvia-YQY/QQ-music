@@ -1,6 +1,5 @@
 document.addEventListener("click",function(event){
 	let target = event.target
-	console.log(target)
 	if(target.dataset.role !== "tab") return
 
 	[].forEach.call(target.parentElement.children,tab=>{
@@ -16,7 +15,6 @@ document.addEventListener("click",function(event){
 		[].forEach.call(content.parentElement.children,child => {
 			child.style.display = 'none'
 		})
-
 		content.style.display = 'block'
 
 	}

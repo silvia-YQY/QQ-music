@@ -56,25 +56,49 @@ body header {
         color: #31c27c;
         border-bottom: 2px solid #31c27c; }
 
-.radios {
-  margin: 14px 10px 10px; }
-  .radios .title {
+.radios, .playlists {
+  margin: 14px 0px 10px 10px; }
+  .radios .title, .playlists .title {
     font-size: 16px;
     color: #000;
     margin-bottom: 11px;
     font-weight: normal; }
-  .radios .list {
+  .radios .list, .playlists .list {
     display: flex;
-    flex: wrap; }
-    .radios .list .list-item {
-      flex: 1; }
-      .radios .list .list-item img {
+    flex-wrap: wrap; }
+    .radios .list .list-item, .playlists .list .list-item {
+      flex: 1;
+      flex-basis: 40%;
+      font-size: 14px;
+      background: #fff;
+      margin-right: 10px;
+      margin-bottom: 10px; }
+      .radios .list .list-item .list-media, .playlists .list .list-item .list-media {
+        position: relative; }
+      .radios .list .list-item .list-title, .playlists .list .list-item .list-title {
+        height: 36px;
+        margin-top: 5px;
+        padding: 0 5px; }
+      .radios .list .list-item .icon, .playlists .list .list-item .icon {
+        background-image: url("../img/icon_play.png");
+        background-repeat: no-repeat;
+        background-size: 24px 60px; }
+      .radios .list .list-item .icon-play, .playlists .list .list-item .icon-play {
+        height: 24px;
+        bottom: 5px;
+        right: 5px;
+        width: 24px;
+        position: absolute;
+        background-position: 0 0; }
+      .radios .list .list-item img, .playlists .list .list-item img {
         width: 100%;
+        height: 192px;
         display: block; }
 
 * {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  box-sizing: border-box; }
 
 body {
   background: #f4f4f4; }

@@ -2,7 +2,7 @@ class Slider {
 	constructor(options = {}){
 		this.$el = options.el
 		this.slides = options.slides
-		this.interval = options.interval || 2000
+		this.interval = options.interval || 3000
 		this.index = 0
 		this.render()
 		this.start()
@@ -49,7 +49,6 @@ class Slider {
 			return 
 		}
 		let x = `-${this.index * 100 / this.slides.length}%`
-		console.log(x)
 		this.$wrap.style.transform = `translate(${x})`
 	}
 }
