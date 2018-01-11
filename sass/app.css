@@ -92,8 +92,54 @@ body header {
         background-position: 0 0; }
       .radios .list .list-item img, .playlists .list .list-item img {
         width: 100%;
-        height: 192px;
         display: block; }
+
+.rank-view {
+  margin: 10px; }
+  .rank-view .toolist li {
+    margin-bottom: 10px;
+    display: flex;
+    overflow: hidden;
+    background: #fff; }
+    .rank-view .toolist li .top-item-media a {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      display: block; }
+      .rank-view .toolist li .top-item-media a img {
+        display: block;
+        width: 100px;
+        height: 100px; }
+    .rank-view .toolist li .top-item-info {
+      margin: 0px 10px 0 15px;
+      position: relative;
+      flex: 1; }
+      .rank-view .toolist li .top-item-info .top-list-title {
+        width: 175px;
+        height: 24px;
+        font-size: 16px;
+        color: #000;
+        font-weight: normal;
+        margin: 5px 0; }
+      .rank-view .toolist li .top-item-info .top-item-list {
+        padding: 0 10px 0 0; }
+        .rank-view .toolist li .top-item-info .top-item-list .top-item-song {
+          width: 175px;
+          height: 21px;
+          font-size: 14px;
+          margin-bottom: 0px;
+          color: rgba(0, 0, 0, 0.5); }
+          .rank-view .toolist li .top-item-info .top-item-list .top-item-song .song-name {
+            color: #000;
+            margin-left: 8px;
+            margin-right: 5px; }
+        .rank-view .toolist li .top-item-info .top-item-list .topic_arrow {
+          position: absolute;
+          right: 10px;
+          top: 45%;
+          width: 6px;
+          height: 6px;
+          color: rgba(0, 0, 0, 0.5); }
 
 * {
   padding: 0;
@@ -111,5 +157,22 @@ ul, ol {
 h1, h2 {
   margin: 0;
   font-weight: normal; }
+
+a {
+  text-decoration: none; }
+
+i {
+  font-style: normal; }
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.active {
+  display: block; }
+
+.hide {
+  display: none; }
 
 /*# sourceMappingURL=app.css.map */

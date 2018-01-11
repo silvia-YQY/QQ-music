@@ -4,6 +4,7 @@
 @import "nav";
 @import "helper";
 @import "rec";
+@import "toplist";
 
 
 
@@ -27,5 +28,25 @@ h1,h2{
 	margin:0;
 	font-weight: normal;
 }
+a{
+	text-decoration: none;
+}
+i{
+	font-style:normal;
+}
+
+.ellipsis{
+	overflow: hidden;
+    white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.active{
+	display: block;
+}
+.hide{
+	display: none;
+}
+
 
 

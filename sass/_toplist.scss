@@ -1,0 +1,66 @@
+.rank-view{
+    margin:10px;
+    .toolist{
+        li{
+            margin-bottom:10px;
+            display: flex;
+            overflow: hidden;
+            background: #fff;
+            .top-item-media{
+                
+                a{
+                    position: relative;
+                    width: 100px;
+                    height: 100px;
+                    display: block;
+                    img{
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
+            .top-item-info{
+                margin: 0px 10px 0 15px;
+                position: relative;
+                flex:1;
+                .top-list-title{
+                    width:175px;
+                    height: 24px;
+                    font-size: 16px;
+                    color: #000;
+                    font-weight: normal;
+                    margin: 5px 0;
+
+                }
+                .top-item-list{
+                    padding:0 10px 0 0;
+                    
+                    .top-item-song{
+                        width:175px;
+                        height: 21px;
+                        font-size: 14px;
+                        margin-bottom:0px;
+                        color: rgba(0,0,0,.5);
+                        .song-name{
+                            color: #000;
+                            margin-left: 8px;
+                            margin-right: 5px; 
+                        }
+                    }
+                    .topic_arrow{
+                        position: absolute;
+                        right: 10px;
+                        top: 45%;
+                        //margin-top: -4px;
+                        width: 6px;
+                        height: 6px;
+                        color: rgba(0,0,0,.5);
+                    }
+
+                }
+               
+            }
+        }
+    }
+}

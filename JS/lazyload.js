@@ -1,7 +1,9 @@
 function lazyload(images){
     let imgs = [].slice.call(images) //Array.from(images) (es6的方法)
 
-    if("IntersectionObserver" in window){
+    if("IntersectionObserver" in window){ 
+        //IntersectionObserver方法监听图片距离屏幕的距离
+        //此方法兼容性较差
         let observer = new IntersectionObserver(function(entries){
             entries.forEach(entry =>{
                 if (entry.intersectionRatio > 0){
@@ -15,6 +17,7 @@ function lazyload(images){
         imgs.forEach(img => observer.observe(img))
 
     }else{
+        //通用的懒加载方法
         let onscroll = throttle (function (){
             if(images.length === 0 ){
                 return window.removeEventListener('scroll',onscroll)
@@ -49,7 +52,10 @@ function lazyload(images){
         }
     }
 
+
+    //检测图片是否在视窗内
     function inViewport(img){
+
         let {top, left, right, bottom} =  img.getBoundingClientRect()
         let vpWidth = document.documentElement.clientWidth
         let vpHeight = document.documentElement.clientHeight
@@ -60,11 +66,12 @@ function lazyload(images){
         )
 
         // let rect = img.getBoundingClientRect()
-        // let top = rect.top  *4   等价于上面一行代码        
+        // let top = rect.top  *4   等价于上面第一行let的代码
+        //上面return的方法仅适合  es6      
 
     }
 
-
+    //加载图片
     function loadImags(img ,callback){
         let image = new Image()
         image.src = img.dataset.src

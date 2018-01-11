@@ -1,0 +1,304 @@
+{
+    "code": 0,
+    "subcode": 0,
+    "message": "",
+    "default": 0,
+    "data": {
+        "topList": [
+            {
+                "id": 4,
+                "listenCount": 19900000,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_4_300_212782343.jpg",
+                "songList": [
+                    {
+                        "singername": "王菲",
+                        "songname": "无问西东"
+                    },
+                    {
+                        "singername": "林俊杰",
+                        "songname": "忘了你忘了我 (Live)"
+                    },
+                    {
+                        "singername": "于文文",
+                        "songname": "体面"
+                    }
+                ],
+                "topTitle": "安利XS·巅峰榜·流行指数",
+                "type": 0
+            },
+            {
+                "id": 26,
+                "listenCount": 20000000,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_26_300_212606735.jpg",
+                "songList": [
+                    {
+                        "singername": "于文文",
+                        "songname": "体面"
+                    },
+                    {
+                        "singername": "吴亦凡/赵丽颖",
+                        "songname": "想你"
+                    },
+                    {
+                        "singername": "袁娅维",
+                        "songname": "说散就散"
+                    }
+                ],
+                "topTitle": "巅峰榜·热歌",
+                "type": 0
+            },
+            {
+                "id": 27,
+                "listenCount": 13061510,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_27_300_212782343.jpg",
+                "songList": [
+                    {
+                        "singername": "王菲",
+                        "songname": "无问西东"
+                    },
+                    {
+                        "singername": "Liam Payne/Rita Ora",
+                        "songname": "For You (Fifty Shades Freed)"
+                    },
+                    {
+                        "singername": "孙子涵",
+                        "songname": "万里挑一"
+                    }
+                ],
+                "topTitle": "巅峰榜·新歌",
+                "type": 0
+            },
+            {
+                "id": 30,
+                "listenCount": 10000000,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_30_300_212763999.jpg",
+                "songList": [
+                    {
+                        "singername": "林俊杰",
+                        "songname": "忘了你忘了我 (Live)"
+                    },
+                    {
+                        "singername": "林志炫",
+                        "songname": "不为谁而作的歌 (Live)"
+                    },
+                    {
+                        "singername": "羽泉",
+                        "songname": "爱情诺曼底 (Live)"
+                    }
+                ],
+                "topTitle": "巅峰榜·梦想的声音",
+                "type": 0
+            },
+            {
+                "id": 28,
+                "listenCount": 15900000,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_28_300_212672188.jpg",
+                "songList": [
+                    {
+                        "singername": "尘楠",
+                        "songname": "樱花树下的约定"
+                    },
+                    {
+                        "singername": "尘楠",
+                        "songname": "BINGBIAN病变"
+                    },
+                    {
+                        "singername": "广东雨神",
+                        "songname": "广东爱情故事"
+                    }
+                ],
+                "topTitle": "巅峰榜·网络歌曲",
+                "type": 0
+            },
+            {
+                "id": 5,
+                "listenCount": 6963520,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_5_300_212606735.jpg",
+                "songList": [
+                    {
+                        "singername": "于文文",
+                        "songname": "体面"
+                    },
+                    {
+                        "singername": "张杰/LOKEY低调组合",
+                        "songname": "FAST"
+                    },
+                    {
+                        "singername": "吴亦凡/赵丽颖",
+                        "songname": "想你"
+                    }
+                ],
+                "topTitle": "巅峰榜·内地",
+                "type": 0
+            },
+            {
+                "id": 6,
+                "listenCount": 3154640,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_6_300_212670185.jpg",
+                "songList": [
+                    {
+                        "singername": "蔡依林",
+                        "songname": "什么什么"
+                    },
+                    {
+                        "singername": "陶喆",
+                        "songname": "Mars Baby"
+                    },
+                    {
+                        "singername": "容祖儿",
+                        "songname": "重生"
+                    }
+                ],
+                "topTitle": "巅峰榜·港台",
+                "type": 0
+            },
+            {
+                "id": 3,
+                "listenCount": 9900000,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_3_300_212582070.jpg",
+                "songList": [
+                    {
+                        "singername": "Imagine Dragons/Khalid",
+                        "songname": "Thunder / Young Dumb & Broke (Medley)"
+                    },
+                    {
+                        "singername": "Kesha",
+                        "songname": "This Is Me"
+                    },
+                    {
+                        "singername": "Alan Walker/Noah Cyrus/Digital Farm Animals",
+                        "songname": "All Falls Down"
+                    }
+                ],
+                "topTitle": "巅峰榜·欧美",
+                "type": 0
+            },
+            {
+                "id": 16,
+                "listenCount": 5025600,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_16_300_212663173.jpg",
+                "songList": [
+                    {
+                        "singername": "딘 (DEAN)",
+                        "songname": "instagram"
+                    },
+                    {
+                        "singername": "엄정화 (严正花)/이효리 (李孝利)",
+                        "songname": "Delusion (Duet With 이효리)"
+                    },
+                    {
+                        "singername": "에이핑크 (Apink)",
+                        "songname": "Hello Hello"
+                    }
+                ],
+                "topTitle": "巅峰榜·韩国",
+                "type": 0
+            },
+            {
+                "id": 29,
+                "listenCount": 3631980,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_29_300_212606735.jpg",
+                "songList": [
+                    {
+                        "singername": "于文文",
+                        "songname": "体面"
+                    },
+                    {
+                        "singername": "彭昱畅/孙雪宁",
+                        "songname": "爱刚刚好"
+                    },
+                    {
+                        "singername": "袁娅维",
+                        "songname": "说散就散"
+                    }
+                ],
+                "topTitle": "巅峰榜·影视金曲",
+                "type": 0
+            },
+            {
+                "id": 17,
+                "listenCount": 1496395,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_17_300_212122798.jpg",
+                "songList": [
+                    {
+                        "singername": "初音ミク (初音未来)",
+                        "songname": "Shining Star"
+                    },
+                    {
+                        "singername": "GENERATIONS from EXILE TRIBE (放浪新世代 from 放浪一族)",
+                        "songname": "ALRIGHT! ALRIGHT!"
+                    },
+                    {
+                        "singername": "赤西仁 (Jin Akanishi)",
+                        "songname": "Blessèd"
+                    }
+                ],
+                "topTitle": "巅峰榜·日本",
+                "type": 0
+            },
+            {
+                "id": 201,
+                "listenCount": 416129,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/20150127163830.jpg",
+                "songList": [
+                    {
+                        "singername": "袁娅维",
+                        "songname": "说散就散"
+                    },
+                    {
+                        "singername": "于文文",
+                        "songname": "体面"
+                    },
+                    {
+                        "singername": "高颖",
+                        "songname": "枷锁"
+                    }
+                ],
+                "topTitle": "巅峰榜·MV",
+                "type": 0
+            },
+            {
+                "id": 52,
+                "listenCount": 1388590,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_52_300_212682722.jpg",
+                "songList": [
+                    {
+                        "singername": "孟楠",
+                        "songname": "硬邦邦"
+                    },
+                    {
+                        "singername": "丁世光",
+                        "songname": "如果我们当时一起会怎么样/If"
+                    },
+                    {
+                        "singername": "Kafe.Hu",
+                        "songname": "FIRE（火）"
+                    }
+                ],
+                "topTitle": "巅峰榜·腾讯音乐人原创榜",
+                "type": 0
+            },
+            {
+                "id": 36,
+                "listenCount": 2440880,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_36_300_200525765.jpg",
+                "songList": [
+                    {
+                        "singername": "苏悦宁",
+                        "songname": "红色高跟鞋"
+                    },
+                    {
+                        "singername": "陈诗思",
+                        "songname": "我好想你"
+                    },
+                    {
+                        "singername": "胡慧",
+                        "songname": "分手快乐"
+                    }
+                ],
+                "topTitle": "巅峰榜·K歌金曲",
+                "type": 0
+            }
+        ]
+    }
+}
