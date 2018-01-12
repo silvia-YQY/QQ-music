@@ -1,6 +1,6 @@
 (function(){
-
-	fetch('/json/rec.json')
+//
+	fetch('http://localhost:4000/')
 		.then(res => res.json())
 		.then(render)
 

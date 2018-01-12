@@ -11,6 +11,8 @@
     .list{
         display: flex;
         flex-wrap:wrap;
+        
+        
         .list-item {
             flex:1;
             flex-basis: 40%;
@@ -20,10 +22,11 @@
             margin-bottom: 10px;
             .list-media{
                 position: relative;
+                
             }
             .list-title{
                 height: 36px;
-                margin-top:5px;
+                margin:5px 0;
                 padding:0 5px;
                 // white-space: nowrap;
                 // overflow: hidden;
@@ -48,5 +51,18 @@
                 display: block;
             }
         }
+    }
+}
+
+.radios {
+    .list{
+        width: 50% !important;
+        .list-item{
+            //width:50% !important;
+            .list-title{
+                margin-bottom: 0 !important;
+            }
+        }
+
     }
 }
