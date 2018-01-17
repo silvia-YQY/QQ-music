@@ -146,6 +146,79 @@ body header {
           height: 6px;
           color: rgba(0, 0, 0, 0.5); }
 
+.search-view {
+  position: relative; }
+  .search-view .search-bar {
+    background: #f4f4f4;
+    padding: 10px; }
+    .search-view .search-bar .input-wrap {
+      position: relative;
+      border-radius: 3px;
+      background: #fff;
+      padding: 8px 12px 8px 35px; }
+      .search-view .search-bar .input-wrap .search-form #search {
+        height: 20px;
+        line-height: 20px;
+        width: 100%;
+        color: rgba(0, 0, 0, 0.2);
+        border: none;
+        -webkit-appearance: none;
+        font-size: 14px;
+        outline: none; }
+        .search-view .search-bar .input-wrap .search-form #search::-webkit-input-placeholder {
+          color: rgba(0, 0, 0, 0.2); }
+      .search-view .search-bar .input-wrap .search-form .icon-search img {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: 10px;
+        left: 10px; }
+  .search-view .search-results {
+    position: relative; }
+    .search-view .search-results .song-list .song-item {
+      margin-bottom: 2px;
+      position: relative;
+      border-radius: 3px;
+      background: #fff;
+      padding: 0.1px 10px 7px 55px; }
+      .search-view .search-results .song-list .song-item .icon-music {
+        position: absolute;
+        top: 10px;
+        left: 8px;
+        width: 30px;
+        height: 25px;
+        margin: 5px; }
+        .search-view .search-results .song-list .song-item .icon-music img {
+          width: 30px;
+          height: 25px;
+          opacity: 0.4; }
+      .search-view .search-results .song-list .song-item .song-artist {
+        color: #808080;
+        font-size: 14px; }
+      .search-view .search-results .song-list .song-item .song-name {
+        margin: 10px 0 2px;
+        line-height: 18px;
+        font-size: 16px;
+        font-weight: normal;
+        color: #000; }
+  .search-view .search-loading {
+    position: relative;
+    margin: 10px 50px; }
+    .search-view .search-loading .loading-text {
+      background: #fff;
+      padding: 5px 0;
+      border-radius: 10px; }
+      .search-view .search-loading .loading-text img {
+        position: absolute;
+        top: 3px;
+        left: 8px;
+        width: 30px;
+        height: 25px;
+        opacity: 0.4; }
+      .search-view .search-loading .loading-text p {
+        color: #808080;
+        padding: 0 50px; }
+
 * {
   padding: 0;
   margin: 0;
@@ -179,5 +252,12 @@ i {
 
 .hide {
   display: none; }
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden; }
 
 /*# sourceMappingURL=app.css.map */

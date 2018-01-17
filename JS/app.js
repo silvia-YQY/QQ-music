@@ -1,10 +1,10 @@
 (function(){
 //
-	fetch('http://localhost:4000/')
+	fetch('http://localhost:3000')
 		.then(res => res.json())
 		.then(render)
 
-	fetch('/json/rank.json')
+	fetch('http://localhost:3000/toplist')
 		.then(res => res.json())
 		.then(json => json.data.topList)
 		.then(renderTopList)
@@ -15,6 +15,8 @@
 			renderPlaylists(json.data.songList)
 			lazyload(document.querySelectorAll('.lazyload'))
 		}
+
+		let search = new Search(document.querySelector('.search-view'))
 	
 		function renderSlider(slides){
 			slides = slides.map(slide => {

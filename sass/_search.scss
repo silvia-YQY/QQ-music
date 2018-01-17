@@ -1,0 +1,97 @@
+.search-view{
+    position: relative;
+    .search-bar{
+        background: #f4f4f4;
+        padding: 10px;
+        .input-wrap{
+            position: relative;
+            border-radius: 3px;
+            background: #fff;
+            padding: 8px 12px 8px 35px;
+            .search-form{
+                #search{
+                    height: 20px;
+                    line-height: 20px;
+                    width: 100%;
+                    color: rgba(0, 0, 0,0.2);
+                    border: none;
+                    -webkit-appearance: none;
+                    font-size: 14px;
+                    outline:none;
+                    &::-webkit-input-placeholder{
+                        color: rgba(0, 0, 0,0.2);
+                      }
+                }
+                .icon-search{
+                    img{
+                        position: absolute;
+                        width: 18px;
+                        height: 18px;
+                        top: 10px;
+                        left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .search-results{
+        position: relative;
+        
+        .song-list{
+            .song-item{
+                margin-bottom:2px;
+                position: relative;
+                border-radius: 3px;
+                background: #fff;
+                padding: 0.1px 10px 7px 55px;
+                .icon-music{
+                    position: absolute;
+                    top: 10px;
+                    left: 8px;
+                    width: 30px;
+                    height: 25px;
+                    margin:5px;
+                    img{
+                        width: 30px;
+                        height: 25px;
+                        opacity: 0.4;
+                    }
+                }
+                .song-artist{
+                    color: #808080;
+                    font-size: 14px;
+                }
+                .song-name{
+                    margin: 10px 0 2px;
+                    line-height: 18px;
+                    font-size: 16px;
+                    font-weight: normal;
+                    color: #000;
+                }
+            }
+        }
+    }
+    .search-loading{
+        position: relative;
+        margin:10px 50px;
+        .loading-text{
+            background: #fff;
+            padding: 5px 0;
+            border-radius: 10px;
+            img{
+                position: absolute;
+                top: 3px;
+                left: 8px;
+                width: 30px;
+                height: 25px;
+                opacity: 0.4;
+            }
+            p{
+                color: #808080;
+                padding: 0 50px;
+            }
+        }
+
+    }
+
+}
