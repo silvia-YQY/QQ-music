@@ -12,14 +12,16 @@ class Search{
         this.nomore = false
         this.onscroll = this.onScroll.bind(this)
         window.addEventListener("scroll",this.onscroll)
-        this.loading()
+        
     }
 
     onkeyUp(event){
         let keyword = event.target.value.trim()
         if(!keyword) return this.reset()
         if(event.key !== "Enter") return
+        this.loading()
         this.search(keyword)
+
     }
 
     onScroll(){
@@ -28,7 +30,6 @@ class Search{
             this.search(this.keyword,this.page + 1)
         }
         
-
     }
 
     reset(){
@@ -36,6 +37,7 @@ class Search{
         this.keyword = ''
         this.songs = []
         this.$songs.innerHTML = ''
+        this.$el.querySelector('.search-loading').classList.add("hide")
     }
 
     search(keyword,page){
@@ -46,14 +48,16 @@ class Search{
             .then(res => res.json())
             .then(json => {
                 this.page = json.data.song.curpage
-                this.nomore = (json.message === 'query error')  //no results
+                this.nomore = (json.message === 'no results')  //no results
                 this.songs.push(...json.data.song.list)
                 return json.data.song.list
             })
             .then(songs => this.append(songs))
             .then(() => this.loading())
             .then(() => this.fetching = false)
+            .then(() => this.endLoading())
             .catch(() => this.fetching = false)
+        
     }
 
     append(songs){
@@ -65,11 +69,16 @@ class Search{
             </li>`).join(" ")
 
         this.$songs.insertAdjacentHTML('beforeEnd',html)
-        
     }
 
     loading(){
-        this.fetching = true
         this.$el.querySelector('.search-loading').classList.remove("hide")
+    }
+
+    endLoading(){
+        if(this.nomore){
+            this.$el.querySelector('.loading-text').classList.add("hide")
+            this.$el.querySelector('.loading-done').classList.remove("hide")
+        }
     }
 }

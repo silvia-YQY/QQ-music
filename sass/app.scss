@@ -6,8 +6,7 @@
 @import "rec";
 @import "toplist";
 @import "search";
-
-
+@import "player";
 
 *{
 	padding:0;
@@ -55,5 +54,10 @@ i{
 	fill: currentColor;
 	overflow: hidden;
  }
+
+ @keyframes circle{
+	0%{ transform:rotate(0deg); }
+	100%{ transform:rotate(360deg); }
+}
 
 
