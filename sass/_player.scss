@@ -12,7 +12,7 @@
         position: relative;
         //border: 1px solid red;
         height: 100%;
-        z-index: 999;
+        z-index: 99;
         .player-header{
             position: relative;
             z-index: 999;
@@ -69,14 +69,16 @@
         }
         .player-lyrics{
             position: relative;
-            z-index: 999;
+            z-index: 99;
             height: 100%;
             background: rgba(0,0,0,.6);
+            padding-top:px(20);
+            padding-bottom:px(180);
             .icon-list{
                 display: block;
                 position: relative;
                 left: px(270);
-                top: px(372);
+                top: px(320);
                 width: 33px;
                 height: 33px;
                 background-image: url(/img/sprite_play.png);
@@ -86,7 +88,7 @@
             }
         }
         .player-footer{
-            z-index: 999;
+            z-index: 99;
             position: absolute;
             background: $nav-item-active;
             width: px(220);
@@ -96,7 +98,6 @@
             line-height: px(45);
             margin: 0 px(50) ;
             padding: 0 px(55) ;
-            overflow: hidden;
             white-space: nowrap;
             font-size: 20px;
             color: #fff;
@@ -114,10 +115,40 @@
                 background-size: px(40) px(350);
                 background-position:0px px(-300);
             }
+            .progress{
+                position: relative;
+                //width: 100%;
+                border:1px solid red;
+                bottom:px(70);
+                opacity: 0.4;
+                display: flex;
+                justify-content: space-around;
+                align-items:center;
+                .progress-elapsed{
+                    font-size: 14px;
+                }
+                .progress-duration{
+                    font-size: 14px;
+                }
+
+                .progress-bar{
+                    width:px(220);
+                    height: 2px;
+                    margin: 0 px(50) ;
+                    background: #FFF;
+                    
+                    .progress-bar-progress{
+                        //background: red;
+                        width:px(100);
+                        height: 2px;
+                    }
+                }
+
+            }
             .actions{
                 position: relative;
                 left:-0px;
-                top:px(-34);
+                bottom:px(79);
                 a{
                     text-decoration:none;
                     color: #fff;

@@ -235,7 +235,7 @@ body header {
   #player .player-container {
     position: relative;
     height: 100%;
-    z-index: 999; }
+    z-index: 99; }
     #player .player-container .player-header {
       position: relative;
       z-index: 999;
@@ -278,14 +278,16 @@ body header {
         background-position: 16px -193px; }
     #player .player-container .player-lyrics {
       position: relative;
-      z-index: 999;
+      z-index: 99;
       height: 100%;
-      background: rgba(0, 0, 0, 0.6); }
+      background: rgba(0, 0, 0, 0.6);
+      padding-top: 0.625rem;
+      padding-bottom: 5.625rem; }
       #player .player-container .player-lyrics .icon-list {
         display: block;
         position: relative;
         left: 8.4375rem;
-        top: 11.625rem;
+        top: 10rem;
         width: 33px;
         height: 33px;
         background-image: url(/img/sprite_play.png);
@@ -293,7 +295,7 @@ body header {
         background-size: 1.25rem 10.9375rem;
         background-position: 0.09375rem -7.25rem; }
     #player .player-container .player-footer {
-      z-index: 999;
+      z-index: 99;
       position: absolute;
       background: #31c27c;
       width: 6.875rem;
@@ -303,7 +305,6 @@ body header {
       line-height: 1.40625rem;
       margin: 0 1.5625rem;
       padding: 0 1.71875rem;
-      overflow: hidden;
       white-space: nowrap;
       font-size: 20px;
       color: #fff;
@@ -319,10 +320,30 @@ body header {
         background-repeat: no-repeat;
         background-size: 1.25rem 10.9375rem;
         background-position: 0px -9.375rem; }
+      #player .player-container .player-footer .progress {
+        position: relative;
+        border: 1px solid red;
+        bottom: 2.1875rem;
+        opacity: 0.4;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+        #player .player-container .player-footer .progress .progress-elapsed {
+          font-size: 14px; }
+        #player .player-container .player-footer .progress .progress-duration {
+          font-size: 14px; }
+        #player .player-container .player-footer .progress .progress-bar {
+          width: 6.875rem;
+          height: 2px;
+          margin: 0 1.5625rem;
+          background: #FFF; }
+          #player .player-container .player-footer .progress .progress-bar .progress-bar-progress {
+            width: 3.125rem;
+            height: 2px; }
       #player .player-container .player-footer .actions {
         position: relative;
         left: -0px;
-        top: -1.0625rem; }
+        bottom: 2.46875rem; }
         #player .player-container .player-footer .actions a {
           text-decoration: none;
           color: #fff; }

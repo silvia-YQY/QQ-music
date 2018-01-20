@@ -19,7 +19,7 @@
 
 
 		let search = new Search(document.querySelector('.search-view'))
-		let player = new MusicPlayer(document.querySelector('#player'))
+		//let player = new MusicPlayer(document.querySelector('#player'))
 	
 		function renderSlider(slides){
 			slides = slides.map(slide => {
