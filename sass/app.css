@@ -51,6 +51,7 @@ body header {
     line-height: 40px; }
     .navbar ul li {
       width: 33.33%;
+      font-size: 16px;
       text-align: center; }
       .navbar ul li.active {
         color: #31c27c;
@@ -241,27 +242,28 @@ body header {
       background: rgba(56, 56, 56, 0.9);
       display: flex;
       justify-content: space-around;
-      height: 90px;
-      padding: 15px 80px 15px 15px; }
+      height: 2.8125rem;
+      padding: 0.46875rem 0.15625rem 0.46875rem 0.15625rem; }
       #player .player-container .player-header img {
-        width: 60px;
-        height: 60px; }
+        width: 1.875rem;
+        height: 1.875rem; }
       #player .player-container .player-header .song-info {
         position: relative;
-        left: 20px;
+        width: 4.6875rem;
+        left: -0.15625rem;
         color: #fff;
-        padding: 5px 0px 5px 0px; }
+        padding-top: 0.15625rem; }
         #player .player-container .player-header .song-info .song-name {
           font-size: 18px;
           white-space: nowrap; }
         #player .player-container .player-header .song-info .song-artist {
-          padding-top: 5px;
+          padding-top: 0.15625rem;
           font-size: 14px;
           white-space: nowrap; }
       #player .player-container .player-header .icon-action {
         position: relative;
-        left: 60px;
-        top: 7px;
+        left: 0rem;
+        top: 0.21875rem;
         width: 45px;
         height: 45px;
         border: 1px solid #fff;
@@ -282,25 +284,25 @@ body header {
       #player .player-container .player-lyrics .icon-list {
         display: block;
         position: relative;
-        left: 270px;
-        top: 372px;
+        left: 8.4375rem;
+        top: 11.625rem;
         width: 33px;
         height: 33px;
         background-image: url(/img/sprite_play.png);
         background-repeat: no-repeat;
-        background-size: 40px 350px;
-        background-position: 3px -232px; }
+        background-size: 1.25rem 10.9375rem;
+        background-position: 0.09375rem -7.25rem; }
     #player .player-container .player-footer {
       z-index: 999;
       position: absolute;
       background: #31c27c;
-      width: 220px;
-      height: 50px;
-      bottom: 20px;
-      height: 45px;
-      line-height: 45px;
-      margin: 0 50px;
-      padding: 0 55px;
+      width: 6.875rem;
+      height: 1.5625rem;
+      bottom: 0.625rem;
+      height: 1.40625rem;
+      line-height: 1.40625rem;
+      margin: 0 1.5625rem;
+      padding: 0 1.71875rem;
       overflow: hidden;
       white-space: nowrap;
       font-size: 20px;
@@ -309,18 +311,18 @@ body header {
       text-align: center; }
       #player .player-container .player-footer .icon-list {
         position: relative;
-        left: -49px;
-        top: 6px;
-        width: 33px;
-        height: 33px;
+        left: -1.53125rem;
+        top: 0.1875rem;
+        width: 1.03125rem;
+        height: 1.03125rem;
         background-image: url(/img/sprite_play.png);
         background-repeat: no-repeat;
-        background-size: 40px 350px;
-        background-position: 0px -300px; }
+        background-size: 1.25rem 10.9375rem;
+        background-position: 0px -9.375rem; }
       #player .player-container .player-footer .actions {
         position: relative;
         left: -0px;
-        top: -34px; }
+        top: -1.0625rem; }
         #player .player-container .player-footer .actions a {
           text-decoration: none;
           color: #fff; }

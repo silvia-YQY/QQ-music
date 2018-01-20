@@ -1,4 +1,5 @@
 #player{
+    //display: none;
     position: absolute;
     top:0;
     width:100%;
@@ -18,32 +19,33 @@
             background: rgba(56, 56, 56, 0.9);
             display: flex;
             justify-content: space-around;
-            height: 90px;
-            padding: 15px 80px 15px 15px;
+            height: px(90);
+            padding: px(15) px(5) px(15) px(5);
             img{
                 //border:1px solid #fff;
-                width:60px;
-                height: 60px;
+                width:px(60);
+                height: px(60);
             }
             .song-info{
                 position: relative;
-                left:20px;
+                width:px(150);
+                left:px(-5);
                 color:#fff;
-                padding:5px 0px 5px 0px;
+                padding-top:px(5);
                 .song-name{
                     font-size: 18px;
                     white-space: nowrap;
                 }
                 .song-artist{
-                    padding-top: 5px;
-                    font-size: 14px;
+                    padding-top:  px(5);
+                    font-size:14px;
                     white-space: nowrap;
                 }
             }
             .icon-action{
                 position: relative;
-                left:60px;
-                top:7px;
+                left:px(0) ;
+                top:px(7) ;
                 width: 45px;
                 height: 45px;
                 border:1px solid #fff;
@@ -73,27 +75,27 @@
             .icon-list{
                 display: block;
                 position: relative;
-                left: 270px;
-                top: 372px;
+                left: px(270);
+                top: px(372);
                 width: 33px;
                 height: 33px;
                 background-image: url(/img/sprite_play.png);
                 background-repeat: no-repeat;
-                background-size: 40px 350px;
-                background-position: 3px -232px;
+                background-size: px(40) px(350);
+                background-position:px(3) px(-232);
             }
         }
         .player-footer{
             z-index: 999;
             position: absolute;
             background: $nav-item-active;
-            width: 220px;
-            height: 50px;
-            bottom:20px;
-            height: 45px;
-            line-height: 45px;
-            margin: 0 50px;
-            padding: 0 55px;
+            width: px(220);
+            height: px(50) ;
+            bottom:px(20)  ;
+            height: px(45) ;
+            line-height: px(45);
+            margin: 0 px(50) ;
+            padding: 0 px(55) ;
             overflow: hidden;
             white-space: nowrap;
             font-size: 20px;
@@ -103,19 +105,19 @@
 
             .icon-list{
                 position: relative;
-                left:-49px;
-                top:6px;
-                width: 33px;
-                height:33px;
+                left:px(-49);
+                top:px(6);
+                width: px(33);
+                height:px(33);
                 background-image: (url(/img/sprite_play.png));
                 background-repeat: no-repeat;
-                background-size: 40px 350px;
-                background-position:0px -300px;
+                background-size: px(40) px(350);
+                background-position:0px px(-300);
             }
             .actions{
                 position: relative;
                 left:-0px;
-                top:-34px;
+                top:px(-34);
                 a{
                     text-decoration:none;
                     color: #fff;

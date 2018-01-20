@@ -16,6 +16,8 @@
 			lazyload(document.querySelectorAll('.lazyload'))
 		}
 
+
+
 		let search = new Search(document.querySelector('.search-view'))
 		let player = new MusicPlayer(document.querySelector('#player'))
 	

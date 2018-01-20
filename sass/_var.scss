@@ -1,3 +1,8 @@
+@function px($px){
+    @return $px/$designWidth * 10 + rem;
+}
+$designWidth : 320;
+
 $header-background:#31c27c;
 $header-downLoad-Color:#149c5a;
 $header-height:44px;
