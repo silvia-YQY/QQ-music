@@ -155,11 +155,12 @@ body header {
     .search-view .search-bar .input-wrap {
       position: relative;
       border-radius: 3px;
+      height: 40px;
       background: #fff;
       padding: 8px 12px 8px 35px; }
       .search-view .search-bar .input-wrap .search-form #search {
-        height: 20px;
-        line-height: 20px;
+        position: relative;
+        top: -23px;
         width: 100%;
         color: rgba(0, 0, 0, 0.2);
         border: none;
@@ -208,7 +209,8 @@ body header {
     .search-view .search-loading .loading-text {
       background: #fff;
       padding: 5px 0;
-      border-radius: 10px; }
+      border-radius: 10px;
+      font-size: 14px; }
       .search-view .search-loading .loading-text img {
         position: absolute;
         top: 3px;
@@ -326,23 +328,27 @@ body header {
         left: -90px;
         top: -0.46875rem;
         bottom: 2.1875rem;
-        opacity: 0.4;
         display: flex;
         justify-content: center;
         align-items: center; }
         #player .player-container .player-footer .progress .progress-elapsed {
-          font-size: 14px; }
+          font-size: 14px;
+          opacity: 0.4; }
         #player .player-container .player-footer .progress .progress-duration {
-          font-size: 14px; }
+          font-size: 14px;
+          opacity: 0.4; }
         #player .player-container .player-footer .progress .progress-bar {
           flex-basis: 6.25rem;
           height: 2px;
           margin: 0 0.46875rem;
-          background: #FFF; }
+          background: rgba(255, 255, 255, 0.4);
+          overflow: hidden; }
           #player .player-container .player-footer .progress .progress-bar .progress-bar-progress {
-            background: red;
-            width: 3.125rem;
-            height: 2px; }
+            position: relative;
+            background: #31c27c;
+            width: 6.25rem;
+            height: 2px;
+            transform: translate(-100%); }
       #player .player-container .player-footer .actions {
         position: absolute;
         left: 2.1875rem;

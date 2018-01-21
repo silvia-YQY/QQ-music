@@ -4,7 +4,7 @@ class MusicPlayer{
         this.$el.addEventListener('click',this)
         this.createAudio()
         //this.lyrics = new LyricsPlayer(this.$el.querySelector('.player-lyrics'))
-        this.progress = new PragressBar(this.$el.querySelector('.progress'))
+        this.progress = new PragressBar(this.$el.querySelector('.progress'), 10, true)
         
     }
 
@@ -16,7 +16,7 @@ class MusicPlayer{
 
     handleEvent(event){
         let target = event.target
-        console.log(target)
+        //console.log(target)
         switch(true){
             case target.matches('.icon-play'):
                 this.onPlay(event)  
@@ -24,6 +24,11 @@ class MusicPlayer{
             case target.matches('.icon-pause'):
                 this.onPause(event)
                 break
+            case target.matches('.icon-list'):
+                this.hide()
+                break
+            case target.matches('.show-player'):
+                this.show()
         }
     }
 
@@ -42,10 +47,10 @@ class MusicPlayer{
     }
 
     show(){
-
+        this.$el.classList.remove('hide')
     }
 
     hide(){
-
+        this.$el.classList.add('hide')
     }
 }

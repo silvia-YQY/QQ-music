@@ -20,6 +20,12 @@
 
 		let search = new Search(document.querySelector('.search-view'))
 		let player = new MusicPlayer(document.querySelector('#player'))
+
+		document.querySelector('.show-player').addEventListener('click',()=>{
+			player.show()
+		})
+
+		window.player = player
 	
 		function renderSlider(slides){
 			slides = slides.map(slide => {

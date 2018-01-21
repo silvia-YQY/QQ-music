@@ -1,5 +1,5 @@
 class PragressBar{
-    constructor(el,duration){
+    constructor(el, duration, start){
         this.$el = el
         this.elapsed = 0;
         this.duration = duration || 0
@@ -10,7 +10,40 @@ class PragressBar{
         this.$duration = this.$el.querySelector('.progress-duration')
         this.$elapsed.innerText = this.formatTime(this.elapsed)
         this.$duration.innerText = this.formatTime(this.duration)
+        if(start) this.start()
         
+    }
+
+    start(){
+        this.intervalId = setInterval(this.update.bind(this),50)
+        
+    }
+
+    pause(){
+        clearInterval(this.intervalId)
+    }
+
+    update(){
+        this.elapsed += 0.05
+        this.progress = this.elapsed / this.duration 
+        //console.log(this.progress)
+        if(this.elapsed >= this.duration) this.reset()
+            this.$elapsed.innerText = this.formatTime(this.elapsed)
+            this.$progress.style.transform = `translate(${this.progress * 100 - 100 }%)`
+            
+
+
+       
+    }
+
+    reset(duration){
+        this.pause()
+        this.elapsed = 0
+        this.progress = 0
+        if(duration){
+            this.duration =+ duration
+            this.$duration.innerText = this.formatTime(this.duration)
+        }
     }
 
     render(){

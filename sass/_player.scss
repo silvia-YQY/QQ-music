@@ -123,27 +123,33 @@
                 top:px(-15);
                 // border:1px solid red;
                 bottom:px(70);
-                opacity: 0.4;
+               
                 display: flex;
                 justify-content: center;
                 align-items:center;
                 .progress-elapsed{
                     font-size: 14px;
+                    opacity: 0.4;
                 }
                 .progress-duration{
                     font-size: 14px;
+                    opacity: 0.4;
             
                 }
                 .progress-bar{
                     flex-basis:px(200);
                     height: 2px;
                     margin: 0 px(15) ;
-                    background: #FFF;
+                    background:rgba(255, 255, 255, 0.4);
+                    overflow: hidden;
                     
                     .progress-bar-progress{
-                        background: red;
-                        width:px(100);
+                        position: relative;
+                        //left:px(-200);
+                        background: $nav-item-active;
+                        width:px(200);
                         height: 2px;
+                        transform: translate(-100%);
                     }
                 }
 
