@@ -321,29 +321,32 @@ body header {
         background-size: 1.25rem 10.9375rem;
         background-position: 0px -9.375rem; }
       #player .player-container .player-footer .progress {
-        position: relative;
-        border: 1px solid red;
+        position: absolute;
+        width: 11.71875rem;
+        left: -90px;
+        top: -0.46875rem;
         bottom: 2.1875rem;
         opacity: 0.4;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center; }
         #player .player-container .player-footer .progress .progress-elapsed {
           font-size: 14px; }
         #player .player-container .player-footer .progress .progress-duration {
           font-size: 14px; }
         #player .player-container .player-footer .progress .progress-bar {
-          width: 6.875rem;
+          flex-basis: 6.25rem;
           height: 2px;
-          margin: 0 1.5625rem;
+          margin: 0 0.46875rem;
           background: #FFF; }
           #player .player-container .player-footer .progress .progress-bar .progress-bar-progress {
+            background: red;
             width: 3.125rem;
             height: 2px; }
       #player .player-container .player-footer .actions {
-        position: relative;
-        left: -0px;
-        bottom: 2.46875rem; }
+        position: absolute;
+        left: 2.1875rem;
+        bottom: 0.03125rem; }
         #player .player-container .player-footer .actions a {
           text-decoration: none;
           color: #fff; }

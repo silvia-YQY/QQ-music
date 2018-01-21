@@ -8,8 +8,8 @@ class PragressBar{
         this.$progress = this.$el.querySelector('.progress-bar-progress')
         this.$elapsed = this.$el.querySelector('.progress-elapsed')
         this.$duration = this.$el.querySelector('.progress-duration')
-        this.$elapsed.innerText = this.formatTime('this.elapsed')
-        this.$duration.innerText = this.formatTime('this.duration')
+        this.$elapsed.innerText = this.formatTime(this.elapsed)
+        this.$duration.innerText = this.formatTime(this.duration)
         
     }
 
