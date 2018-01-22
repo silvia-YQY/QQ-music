@@ -60,11 +60,10 @@
                 // }
             }
             .icon-play{
-
-                background-position: 15px -161px;
+                background-position: px(15) px(-161) ;
             }
             .icon-pause{
-                background-position:16px -193px;
+                background-position:px(16) px(-193) ;
             }
         }
         .player-lyrics{
@@ -78,7 +77,7 @@
                 display: block;
                 position: relative;
                 left: px(270);
-                top: px(320);
+                top: px(310);
                 width: 33px;
                 height: 33px;
                 background-image: url(/img/sprite_play.png);
@@ -119,8 +118,8 @@
                 position: absolute;
                 // box-sizing:border-box;
                 width: px(375);
-                left:-90px;
-                top:px(-15);
+                left:px(-80) ;
+                top:px(-25);
                 // border:1px solid red;
                 bottom:px(70);
                
@@ -156,7 +155,7 @@
             }
             .actions{
                 position: absolute;
-                left:px(70);
+                left:px(60);
                 bottom:px(1);
                 a{
                     text-decoration:none;
