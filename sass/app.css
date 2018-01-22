@@ -141,11 +141,10 @@ body header {
             margin-right: 5px; }
         .rank-view .toolist li .top-item-info .top-item-list .topic_arrow {
           position: absolute;
-          right: 10px;
-          top: 45%;
-          width: 6px;
-          height: 6px;
-          color: rgba(0, 0, 0, 0.5); }
+          right: 0.625rem;
+          top: 30%;
+          width: 0.1875rem;
+          color: rgba(0, 0, 0, 0.2); }
 
 .search-view {
   position: relative; }
@@ -160,7 +159,7 @@ body header {
       padding: 8px 12px 8px 35px; }
       .search-view .search-bar .input-wrap .search-form #search {
         position: relative;
-        top: -23px;
+        top: -0.53125rem;
         width: 100%;
         color: rgba(0, 0, 0, 0.2);
         border: none;
@@ -171,10 +170,10 @@ body header {
           color: rgba(0, 0, 0, 0.2); }
       .search-view .search-bar .input-wrap .search-form .icon-search img {
         position: absolute;
-        width: 18px;
-        height: 18px;
-        top: 10px;
-        left: 10px; }
+        width: 0.5625rem;
+        height: 0.5625rem;
+        top: 0.3125rem;
+        left: 0.3125rem; }
   .search-view .search-results {
     position: relative; }
     .search-view .search-results .song-list .song-item {
@@ -185,11 +184,11 @@ body header {
       padding: 0.1px 10px 7px 55px; }
       .search-view .search-results .song-list .song-item .icon-music {
         position: absolute;
-        top: 10px;
-        left: 8px;
-        width: 30px;
-        height: 25px;
-        margin: 5px; }
+        top: 0.0625rem;
+        left: 0.25rem;
+        width: 1.5625rem;
+        height: 1.5625rem;
+        margin: 0.15625rem 0.15625rem; }
         .search-view .search-results .song-list .song-item .icon-music img {
           width: 30px;
           height: 25px;
@@ -207,7 +206,6 @@ body header {
     position: relative;
     margin: 10px 50px; }
     .search-view .search-loading .loading-text {
-      background: #fff;
       padding: 5px 0;
       border-radius: 10px;
       font-size: 14px; }
