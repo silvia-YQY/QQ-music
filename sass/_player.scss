@@ -73,18 +73,21 @@
             background: rgba(0,0,0,.6);
             padding-top:px(20);
             padding-bottom:px(180);
-            .icon-list{
-                display: block;
-                position: relative;
-                left: px(270);
-                top: px(310);
-                width: 33px;
-                height: 33px;
-                background-image: url(/img/sprite_play.png);
-                background-repeat: no-repeat;
-                background-size: px(40) px(350);
-                background-position:px(3) px(-232);
+            color: rgba(255,255,255,.6);
+            font-size: 16px;
+            
+            .player-lyrics-lines{
+                text-align: center;
+                overflow: scroll;
+                height: 335px;
+                .player-lyrics-line{
+                    
+                    position: relative;
+                    text-overflow: ellipsis;
+                    padding: 9px 0;
+                }
             }
+
         }
         .player-footer{
             z-index: 99;
@@ -103,16 +106,28 @@
             border-radius: 999px;
             text-align: center;
 
-            .icon-list{
+            .icon-log{
                 position: relative;
                 left:px(-49);
-                top:px(6);
+                top:px(-26);
                 width: px(33);
                 height:px(33);
                 background-image: (url(/img/sprite_play.png));
                 background-repeat: no-repeat;
                 background-size: px(40) px(350);
                 background-position:0px px(-300);
+            }
+            .icon-list{
+                display: block;
+                position: relative;
+                left: px(160);
+                top: px(-80);
+                width: 33px;
+                height: 33px;
+                background-image: url(/img/sprite_play.png);
+                background-repeat: no-repeat;
+                background-size: px(40) px(350);
+                background-position:px(3) px(-232);
             }
             .progress{
                 position: absolute;

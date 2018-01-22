@@ -284,18 +284,17 @@ body header {
       height: 100%;
       background: rgba(0, 0, 0, 0.6);
       padding-top: 0.625rem;
-      padding-bottom: 5.625rem; }
-      #player .player-container .player-lyrics .icon-list {
-        display: block;
-        position: relative;
-        left: 8.4375rem;
-        top: 9.6875rem;
-        width: 33px;
-        height: 33px;
-        background-image: url(/img/sprite_play.png);
-        background-repeat: no-repeat;
-        background-size: 1.25rem 10.9375rem;
-        background-position: 0.09375rem -7.25rem; }
+      padding-bottom: 5.625rem;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 16px; }
+      #player .player-container .player-lyrics .player-lyrics-lines {
+        text-align: center;
+        overflow: scroll;
+        height: 335px; }
+        #player .player-container .player-lyrics .player-lyrics-lines .player-lyrics-line {
+          position: relative;
+          text-overflow: ellipsis;
+          padding: 9px 0; }
     #player .player-container .player-footer {
       z-index: 99;
       position: absolute;
@@ -312,16 +311,27 @@ body header {
       color: #fff;
       border-radius: 999px;
       text-align: center; }
-      #player .player-container .player-footer .icon-list {
+      #player .player-container .player-footer .icon-log {
         position: relative;
         left: -1.53125rem;
-        top: 0.1875rem;
+        top: -0.8125rem;
         width: 1.03125rem;
         height: 1.03125rem;
         background-image: url(/img/sprite_play.png);
         background-repeat: no-repeat;
         background-size: 1.25rem 10.9375rem;
         background-position: 0px -9.375rem; }
+      #player .player-container .player-footer .icon-list {
+        display: block;
+        position: relative;
+        left: 5rem;
+        top: -2.5rem;
+        width: 33px;
+        height: 33px;
+        background-image: url(/img/sprite_play.png);
+        background-repeat: no-repeat;
+        background-size: 1.25rem 10.9375rem;
+        background-position: 0.09375rem -7.25rem; }
       #player .player-container .player-footer .progress {
         position: absolute;
         width: 11.71875rem;
