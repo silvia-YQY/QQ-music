@@ -13,12 +13,45 @@ class LyricsPlayer{
     }
 
     start(){
-
+        this.intervalId = setInterval(this.update.bind(this),1000)
+        //每秒运行一次updata进行更新歌词条
     }
 
     pause(){
-
+        clearInterval(this.intervalId)
     }
+
+    update(){
+        this.elapsed += 1
+        this.$lineClass = this.$el.querySelectorAll('.player-lyrics-line')
+        if(this.index === this.lyrics.length - 1 ) return this.reset()
+        for(let i = this.index + 1 ; i < this.lyrics.length; i++){
+            let seconds = this.getSeconds(this.lyrics[i])
+            if(
+                this.elapsed === seconds &&
+                (!this.lyrics[i + 1] || this.elapsed < this.getSeconds(this.lyrics[i + 1]))
+            ){
+                this.$lines.children[this.index].classList.remove('active')
+                this.$lines.children[i].classList.add('active')
+                this.index = i
+                break
+            }
+        }
+
+        //歌词大于第四行，开始滚动
+        if(this.index > 4){
+            let y = -(this.index - 4 ) * this.LINE_HEIFHT
+            //console.log(this.$lineClass)
+            Array.prototype.forEach.call(this.$lineClass,function(e,i){
+                e.style.transform = `translateY(${y}px)`
+            })
+            //don't know why can't use []
+            //[].forEach.call(this.$lineClass,(e) => e.style.transform = `translateY(${y}px)`)
+            //this.$line.style.transform = `translateY(${y}px)`
+            //this.$lineClass.style.transform = `translateY(${y}px)`
+        }
+    }
+
 
     reset(text){
         this.pause()
@@ -29,23 +62,36 @@ class LyricsPlayer{
             this.lyrics = this.text.match(/^\[\d{2}:\d{2}\.\d{2}\].+/gm) || []
             if(this.lyrics.length){
                 this.render()
-                //this.$lines.children[this.index].classList.add('active')
+                this.$lines.children[this.index].classList.add('active')
             }
         }
     }
 
     render(){
-        console.log(this.lyrics)
+        //console.log(this.lyrics)
         let html = this.lyrics.map(line => 
             `<div class = 'player-lyrics-line'> ${line.slice(10)} </div>`
         ).join('')
-        console.log(html)
+        //console.log(html)
         this.$lines.innerHTML = html
     }
 
+    restart(){
+        this.reset()
+        this.start()
+    }
+
+    //获得歌词的秒数
+    getSeconds(line){
+    return + line.replace(/^\[(\d{2}):(\d{2}).+/, (match , p1, p2) => 60*(+p1)+ +p2)
+    }
+
+    //设置扒下来的歌词格式
     formatText(text){
         let div = document.createElement('div')
         div.innerHTML = text
         return div.innerText
     }
 }
+
+LyricsPlayer.prototype.LINE_HEIFHT = 39
