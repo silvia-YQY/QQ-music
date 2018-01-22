@@ -95,10 +95,8 @@ body header {
         width: 100%;
         display: block; }
 
-.radios .list {
-  width: 50% !important; }
-  .radios .list .list-item .list-title {
-    margin-bottom: 0 !important; }
+.radios .list .list-item .list-title {
+  margin-bottom: 0 !important; }
 
 .rank-view {
   margin: 10px; }
