@@ -8,3 +8,16 @@ jsonp1({
 
 })
 
+歌词
+
+                                                 "000aHmbL2aPXWH"
+"https://y.gtimg.cn/music/photo_new/T001R68x68M000000aHmbL2aPXWH.jpg?max_age=2592000"
+
+图片
+                                                   "004AhJHV3slLjN"
+"https://y.gtimg.cn/music/photo_new/T002R150x150M000004AhJHV3slLjN.jpg?max_age=2592000"
+"https://y.gtimg.cn/music/photo_new/T002R150x150M000004PcdqO1ugJ9D.jpg?max_age=2592000"
+
+                                           "000rMFLS0ZnngN" songs.i.songmid
+`https://i.y.qq.com/v8/playsong.html?songmid=${songs.songmid}&ADTAG=myqq&from=myqq&channel=10007100`
+https://i.y.qq.com/v8/playsong.html?songmid=undefined&ADTAG=myqq&from=myqq&channel=10007100
