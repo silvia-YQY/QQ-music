@@ -26,6 +26,25 @@
 		})
 
 		window.player = player
+
+		function onHashChange(){
+			let hash = location.hash
+			console.log(hash)
+			if(/^#player\?+/.test(hash)){
+				let matches = hash.slice(hash.indexOf('.?') + 1).match(/(\w+)=([^&]+)/g)
+				let options = matches && matches.reduce((res,cur) => {
+					let arr = cur.split('=')
+					res[res[0]] = arr[i]
+					return res
+				},{})
+				player.play(options)
+			}else{
+				player.hide()
+			}
+		}
+
+		onHashChange()
+		window.addEventListener('hashchange',onHashChange)
 	
 		function renderSlider(slides){
 			slides = slides.map(slide => {

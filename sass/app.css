@@ -372,11 +372,13 @@ body header {
     bottom: 0;
     z-index: 0;
     width: 100%;
-    background-image: url(../img/jack.jpg);
     background-size: cover;
     background-position: bottom center;
     filter: blur(15px);
     transform: scale(1.15); }
+
+#player > .active {
+  transform: translateY(0) !important; }
 
 * {
   padding: 0;

@@ -63,9 +63,11 @@ class Search{
     append(songs){
         let html = songs.map(song =>`
             <li class='song-item'>
-            <i class='icon icon-music'><img src="img/Music.png" alt=""></i>
-                <h6 class='song-name ellipsis'>${song.songname}</h6>
-                <p class='song-artist ellipsis'>${song.singer.map(s => s.name).join(" ")}</p> 
+                <a src = >
+                    <i class='icon icon-music'><img src="img/Music.png" alt=""></i>
+                    <h6 class='song-name ellipsis'>${song.songname}</h6>
+                    <p class='song-artist ellipsis'>${song.singer.map(s => s.name).join(" ")}</p> 
+                </a>
             </li>`).join(" ")
 
         this.$songs.insertAdjacentHTML('beforeEnd',html)

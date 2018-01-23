@@ -13,6 +13,7 @@ class LyricsPlayer{
     }
 
     start(){
+        this.pause()
         this.intervalId = setInterval(this.update.bind(this),1000)
         //每秒运行一次updata进行更新歌词条
     }

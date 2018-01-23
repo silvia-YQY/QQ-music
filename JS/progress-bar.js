@@ -28,12 +28,13 @@ class PragressBar{
         this.progress = this.elapsed / this.duration 
         //console.log(this.progress)
         if(this.elapsed >= this.duration) this.reset()
-            this.$elapsed.innerText = this.formatTime(this.elapsed)
-            this.$progress.style.transform = `translate(${this.progress * 100 - 100 }%)`
-            
+        this.$elapsed.innerText = this.formatTime(this.elapsed)
+        this.$progress.style.transform = `translate(${this.progress * 100 - 100 }%)`       
+    }
 
-
-       
+    restart(){
+        this.reset()
+        this.start()
     }
 
     reset(duration){
