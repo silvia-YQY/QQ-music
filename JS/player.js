@@ -8,6 +8,7 @@ class MusicPlayer{
         
     }
 
+
     createAudio(event){
         this.$audio = document.createElement('audio')
        // this.$audio.loop = true
@@ -70,7 +71,8 @@ class MusicPlayer{
 
         if(options.songid){
             this.songid = options.songid
-            this.$audio.src=`https://i.y.qq.com/v8/playsong.html?songmid=000rMFLS0ZnngN&ADTAG=myqq&from=myqq&channel=10007100`
+            this.songid = options.songid
+            this.$audio.src=`http://isure.stream.qqmusic.qq.com/C100${this.songmid}.m4a?fromtag=32`
             fetch(``)
                 .then(res => res.json() )
                 .then(json => json.lyric )

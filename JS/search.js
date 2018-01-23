@@ -61,15 +61,16 @@ class Search{
     }
 
     append(songs){
+        //console.log(songs[1].songname,songs[1].songmid)
         let html = songs.map(song =>`
             <li class='song-item'>
-                <a src = >
+                <a href = "https://i.y.qq.com/v8/playsong.html?songmid=${song.songmid}&ADTAG=myqq&from=myqq&channel=10007100">
                     <i class='icon icon-music'><img src="img/Music.png" alt=""></i>
                     <h6 class='song-name ellipsis'>${song.songname}</h6>
                     <p class='song-artist ellipsis'>${song.singer.map(s => s.name).join(" ")}</p> 
                 </a>
             </li>`).join(" ")
-
+        console.log("songs[1].songname")
         this.$songs.insertAdjacentHTML('beforeEnd',html)
     }
 

@@ -55,6 +55,21 @@ app.get('/search',async(req,res) => {
     }
 })
 
+
+//歌词捉取
+app.get('/lyrics',async(req,res) => {
+    const url =`https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric.fcg?nobase64=1&musicid=5016168&songtype=0`
+    try{
+        res.json (await request({
+            uri:url,
+            json:true,
+            headers:HEADERS
+        }))
+    }catch(e){
+        res.json({error:e.message})
+    }
+})
+
 app.listen(PORT)
 
 //curl 'https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg?g_tk=1564641536&uin=545067444&format=json&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&_=1515726030736' -H 'origin: https://m.y.qq.com' -H 'accept-encoding: gzip, deflate, br' -H 'accept-language: zh-CN,zh;q=0.9' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1' -H 'accept: application/json' -H 'referer: https://m.y.qq.com/' -H 'authority: c.y.qq.com' -H 'cookie: RK=KXVqq2qbMr; pgv_pvi=5429872640; OUTFOX_SEARCH_USER_ID_NCOO=462450307.7243392; tvfe_boss_uuid=13451ff537a822fc; o_cookie=545067444; ptisp=ctc; ptcz=fbfda53486ede0b86877ae398be6b51d6224d7d7ce5a465e4718c912f69c9a34; uin=o0545067444; skey=@5WWtGFQlz; pt2gguin=o0545067444; yqq_stat=0; pgv_si=s7586513920; ts_last=y.qq.com/m/act/year_personal_2017/index.html; ts_refer=ADTAGmyqq; ts_uid=4734634728; pgv_info=ssid=s6568362357; pgv_pvid=1869010520' --compressed
