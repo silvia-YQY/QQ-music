@@ -19,9 +19,7 @@ class Search{
         let keyword = event.target.value.trim()
         if(!keyword) return this.reset()
         if(event.key !== "Enter") return
-        this.loading()
         this.search(keyword)
-
     }
 
     onScroll(){
@@ -41,8 +39,11 @@ class Search{
     }
 
     search(keyword,page){
-        if(this.fetching ) return
+        if(this.keyword === keyword && this.songs[page || this.page]) return
+        if(this.fetching || this.nomore) return
+        //if(this.keyword !== keyword ) return
         this.keyword = keyword
+        this.loading()
         this.fetching = true
         fetch(`http://localhost:3000/search?keyword=${this.keyword}&page=${page || this.page}`)
             .then(res => res.json())
@@ -62,9 +63,10 @@ class Search{
 
     append(songs){
         //console.log(songs[1].songname,songs[1].songmid)
+        //href = "https://i.y.qq.com/v8/playsong.html?songmid=${song.songmid}&ADTAG=myqq&from=myqq&channel=10007100"
         let html = songs.map(song =>`
             <li class='song-item'>
-                <a href = "https://i.y.qq.com/v8/playsong.html?songmid=${song.songmid}&ADTAG=myqq&from=myqq&channel=10007100">
+                <a >
                     <i class='icon icon-music'><img src="img/Music.png" alt=""></i>
                     <h6 class='song-name ellipsis'>${song.songname}</h6>
                     <p class='song-artist ellipsis'>${song.singer.map(s => s.name).join(" ")}</p> 

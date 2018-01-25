@@ -23,7 +23,7 @@ class LyricsPlayer{
     }
 
     update(){
-        this.elapsed += 1
+        this.elapsed = Math.round(this.$audio ? this.$audio.currentTime : this.elapsed + 1)
         this.$lineClass = this.$el.querySelectorAll('.player-lyrics-line')
         if(this.index === this.lyrics.length - 1 ) return this.reset()
         for(let i = this.index + 1 ; i < this.lyrics.length; i++){
@@ -58,6 +58,13 @@ class LyricsPlayer{
         this.pause()
         this.index = 0
         this.elapsed = 0
+
+        this.$lines.style.transform = `franslateY(0)`
+        // let $active = this.$lines.querySelector('.active')
+        // if ($active) {
+        //   $active.classList.remove('active')
+        // }
+
         if(text){
             this.text = this.formatText(text) || ''
             this.lyrics = this.text.match(/^\[\d{2}:\d{2}\.\d{2}\].+/gm) || []

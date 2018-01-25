@@ -2,24 +2,25 @@ class MusicPlayer{
     constructor(el){
         this.$el = el
         this.$el.addEventListener('click',this)
-        this.createAudio()
-        this.lyrics = new LyricsPlayer(this.$el.querySelector('.player-lyrics'))
+        this.$audio = this.createAudio()
+        this.lyrics = new LyricsPlayer(this.$el.querySelector('.player-lyrics'),this.$audio)
         this.progress = new PragressBar(this.$el.querySelector('.progress'), 10, true)
-        
+        this.fetching = false
     }
 
 
-    createAudio(event){
-        this.$audio = document.createElement('audio')
+    createAudio(){
+        let audio = document.createElement('audio')
        // this.$audio.loop = true
-        this.$audio.id = `play-${Math.floor(Math.random() * 100)}-${+new Date()}`
-        this.$audio.onended = () =>{
+        audio.id = `play-${Math.floor(Math.random() * 100)}-${+new Date()}`
+        audio.onended = () =>{
             this.$audio.play()  //循环播放
             this.lyrics.restart()
             this.progress.restart()
             console.log('ended')
         }
-        document.body.appendChild(this.$audio)
+        document.body.appendChild(audio)
+        return audio
     }
 
     handleEvent(event){
@@ -42,6 +43,7 @@ class MusicPlayer{
     }
 
     onPlay(event){
+        if(this.fetching) return 
         this.$audio.play()
         this.lyrics.start()
         this.progress.start()
@@ -69,18 +71,21 @@ class MusicPlayer{
         this.$el.querySelector('.album-cover').src = url
         this.$el.querySelector('.player-backgrouond').style.backgroudImage = `url(${url})`
 
-        if(options.songid){
+        if(options.songid,options.songmid){
+            if(this.songid !== options.songid){
+                this.$el.querySelector('.icon-action').className =  'icon-action icon-play'
+            }
             this.songid = options.songid
-            this.songid = options.songid
+            this.songmid = options.songmid
             this.$audio.src=`http://isure.stream.qqmusic.qq.com/C100${this.songmid}.m4a?fromtag=32`
-            fetch(``)
+            fetch(`https://qq-music-api.now.sh/lyrics?id=${this.songid}`)
                 .then(res => res.json() )
                 .then(json => json.lyric )
                 .then(text => this.lyrics.reset(text) )
-                .catch(() => {} )
+                //.catch(() => {} )
         }
         this.show()
-
+        
     }
 
     show(){

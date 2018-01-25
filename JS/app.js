@@ -25,6 +25,10 @@
 			player.show()
 		})
 
+		document.querySelector('.song-list').addEventListener('click',()=>{
+			player.show()
+		})
+
 		window.player = player
 
 		function onHashChange(){

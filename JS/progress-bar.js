@@ -15,8 +15,8 @@ class PragressBar{
     }
 
     start(){
+        this.pause()
         this.intervalId = setInterval(this.update.bind(this),50)
-        
     }
 
     pause(){
@@ -25,9 +25,9 @@ class PragressBar{
 
     update(){
         this.elapsed += 0.05
-        this.progress = this.elapsed / this.duration 
         //console.log(this.progress)
         if(this.elapsed >= this.duration) this.reset()
+        this.progress = this.elapsed / this.duration 
         this.$elapsed.innerText = this.formatTime(this.elapsed)
         this.$progress.style.transform = `translate(${this.progress * 100 - 100 }%)`       
     }
@@ -41,6 +41,8 @@ class PragressBar{
         this.pause()
         this.elapsed = 0
         this.progress = 0
+        this.$progress.style.transform = `translate(-100%)`
+        this.$elapsed.innerText = this.formatTime(this.elapsed)
         if(duration){
             this.duration =+ duration
             this.$duration.innerText = this.formatTime(this.duration)
