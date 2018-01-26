@@ -426,7 +426,5 @@ i {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
-.noscroll {
-  overflow: hidden; }
 
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.cs.map */
