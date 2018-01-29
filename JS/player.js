@@ -96,13 +96,13 @@ class MusicPlayer{
 
     show(){
         this.$el.classList.remove('hide')
-        document.body.classList.add('noscroll')
+        //document.body.classList.add('noscroll')
         //this.$el.classList.add('active')
     }
 
     hide(){
         this.$el.classList.add('hide')
-        document.body.classList.remove('noscroll')
+        //document.body.classList.remove('noscroll')
         //this.$el.classList.remove('active')
     }
 }
