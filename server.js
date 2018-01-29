@@ -71,7 +71,7 @@ app.get('/search',async(req,res) => {
 
 //歌词捉取
 app.get('/lyrics',async(req,res) => {
-    const url =`https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric.fcg?nobase64=1&musicid=5016168&songtype=0`
+    const url =`https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric.fcg?nobase64=1&musicid=${id}&songtype=${type || 0}`
     try{
         let text =  (await request({
             uri:url,

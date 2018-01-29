@@ -6,7 +6,7 @@ class Search{
         this.$songs = this.$el.querySelector('.song-list')
         this.keyword = ''
         this.page = 1
-        this.songs=[]
+        this.songs={}
         this.perpage = 20
         this.fetching = false
         this.nomore = false
@@ -20,12 +20,14 @@ class Search{
         if(!keyword) return this.reset()
         if(event.key !== "Enter") return
         this.search(keyword)
+        console.log('onkeyUp')
     }
 
     onScroll(){
         if(this.nomore) return window.removeEventListener('scroll',this.onscroll)
         if(document.documentElement.clientHeight + pageYOffset > document.body.scrollHeight - 50){
             this.search(this.keyword,this.page + 1)
+            console.log("songs[5].songname")
         }
         
     }
@@ -45,12 +47,13 @@ class Search{
         this.keyword = keyword
         this.loading()
         this.fetching = true
+        
         fetch(`http://localhost:3000/search?keyword=${this.keyword}&page=${page || this.page}`)
             .then(res => res.json())
             .then(json => {
                 this.page = json.data.song.curpage
                 this.nomore = (json.message === 'no results')  //no results
-                this.songs.push(...json.data.song.list)
+                this.songs[this.page] = json.data.song.list
                 return json.data.song.list
             })
             .then(songs => this.append(songs))
@@ -65,8 +68,8 @@ class Search{
         //console.log(songs[1].songname,songs[1].songmid)
         //href = "https://i.y.qq.com/v8/playsong.html?songmid=${song.songmid}&ADTAG=myqq&from=myqq&channel=10007100"
         let html = songs.map(song =>`
-            <li class='song-item'>
-                <a >
+            <li class='song-item' data-songId='${song.songid}'>
+                <a href="#player?artist=${song.singer.map(er => er.name).join(' ')}&songid=${song.songid}&songmid=${song.songmid}&songname=${song.songname}&albummid=${song.albummid}&duration=${song.interval}">
                     <i class='icon icon-music'><img src="img/Music.png" alt=""></i>
                     <h6 class='song-name ellipsis'>${song.songname}</h6>
                     <p class='song-artist ellipsis'>${song.singer.map(s => s.name).join(" ")}</p> 

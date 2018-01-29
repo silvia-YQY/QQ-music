@@ -62,15 +62,20 @@ class MusicPlayer{
     //播放音乐
     play(options = {} ){
         if(!options) return
-
+        //console.log(options)
+        //设置当前播放器的歌曲和歌手
         this.$el.querySelector('.song-name').innerText = options.songname
         this.$el.querySelector('.song-artist').innerText = options.artist
-        this.progress.reset(options.duration)
+        this.progress.reset(options.duration)  //设置当前歌曲时长
 
-        let url = `https://y.gtimg.cn/music/photo_new/T001R68x68M000${options.albummid}.jpg`
+        //歌曲图片and播放器背景图
+        let url = `https://y.gtimg.cn/music/photo_new/T002R150x150M000${options.albummid}.jpg`
+
+        //设置放入图片
         this.$el.querySelector('.album-cover').src = url
-        this.$el.querySelector('.player-backgrouond').style.backgroudImage = `url(${url})`
+        this.$el.querySelector('.player-background').style.backgroundImage = `url(${url})`
 
+        //设置audio对象的链接
         if(options.songid,options.songmid){
             if(this.songid !== options.songid){
                 this.$el.querySelector('.icon-action').className =  'icon-action icon-play'
@@ -78,6 +83,8 @@ class MusicPlayer{
             this.songid = options.songid
             this.songmid = options.songmid
             this.$audio.src=`http://isure.stream.qqmusic.qq.com/C100${this.songmid}.m4a?fromtag=32`
+
+            //获取歌词
             fetch(`https://qq-music-api.now.sh/lyrics?id=${this.songid}`)
                 .then(res => res.json() )
                 .then(json => json.lyric )
@@ -85,16 +92,17 @@ class MusicPlayer{
                 //.catch(() => {} )
         }
         this.show()
-        
     }
 
     show(){
         this.$el.classList.remove('hide')
+        document.body.classList.add('noscroll')
         //this.$el.classList.add('active')
     }
 
     hide(){
         this.$el.classList.add('hide')
+        document.body.classList.remove('noscroll')
         //this.$el.classList.remove('active')
     }
 }

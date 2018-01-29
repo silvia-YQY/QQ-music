@@ -54,11 +54,7 @@
                 background-image: (url(/img/sprite_play.png));
                 background-repeat: no-repeat;
                 background-size: px(40) px(400) ;
-                //background-position: 15px -161px;
                 opacity: 0.7;
-                // &:active{
-                //     background-position:16px -193px;
-                // }
             }
             .icon-play{
                 background-position: px(15) px(-161) ;
@@ -191,7 +187,7 @@
         bottom: 0;
         z-index: 0;
         width:100%;
-        //background-image: (url(../img/jack.jpg));
+        //background-image: url(//y.gtimg.cn/music/photo_new/T002R150x150M000001DQJ5G0ErywD.jpg?max_age=2592000);
         background-size:cover;
         background-position:bottom center;
         filter:blur(15px);

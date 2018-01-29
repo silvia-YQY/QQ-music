@@ -25,22 +25,24 @@
 			player.show()
 		})
 
-		document.querySelector('.song-list').addEventListener('click',()=>{
-			player.show()
-		})
+		// document.querySelector('.song-list').addEventListener('click',()=>{
+		// 	player.play()
+		// })
 
-		window.player = player
+		//window.player = player
+		//window.search =search
 
 		function onHashChange(){
 			let hash = location.hash
-			console.log(hash)
+			
 			if(/^#player\?+/.test(hash)){
 				let matches = hash.slice(hash.indexOf('.?') + 1).match(/(\w+)=([^&]+)/g)
-				let options = matches && matches.reduce((res,cur) => {
+				let options = matches && matches.reduce((res, cur) => {
 					let arr = cur.split('=')
-					res[res[0]] = arr[i]
+					res[arr[0]] = decodeURIComponent(arr[1])
 					return res
-				},{})
+				  }, {})
+				console.log('54', options)
 				player.play(options)
 			}else{
 				player.hide()
