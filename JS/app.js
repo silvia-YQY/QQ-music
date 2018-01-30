@@ -7,7 +7,7 @@ import './resize.js'
 
 
 (function(){
-//
+
 		let search = new Search(document.querySelector('.search-view'))
 		let player = new MusicPlayer(document.querySelector('#player'))
 		let topList = new TopList(document.querySelector('.rank-view')).launch()
