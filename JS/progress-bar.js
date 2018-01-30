@@ -1,4 +1,4 @@
-class PragressBar{
+export class PragressBar{
     constructor(el, duration, start){
         this.$el = el
         this.elapsed = 0;

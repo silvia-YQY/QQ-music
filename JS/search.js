@@ -1,4 +1,4 @@
-class Search{
+export class Search{
     constructor(el){
         this.$el = el
         this.$input = this.$el.querySelector('#search')
@@ -10,9 +10,13 @@ class Search{
         this.perpage = 20
         this.fetching = false
         this.nomore = false
-        this.onscroll = this.onScroll.bind(this)
-        window.addEventListener("scroll",this.onscroll)
-        
+        this.onscroll = this.onScroll.bind(this)  
+        //绑定this（Search）给onScroll函数，以免下面监听scroll时间更换this（Windows）
+        window.addEventListener('scroll', this.onscroll)    
+        //直接监听window的scroll事件会有bug，就是还没有点击搜索的tab，页面也会监听到scroll而运行onScroll函数
+        //this.$el.addEventListener("scroll",this.onscroll)
+        //但是若果指定监听搜索页面，却无法运行。
+        //console.log('ok')
     }
 
     onkeyUp(event){
@@ -20,14 +24,14 @@ class Search{
         if(!keyword) return this.reset()
         if(event.key !== "Enter") return
         this.search(keyword)
-        console.log('onkeyUp')
+        //console.log('onkeyUp')
     }
 
-    onScroll(){
+    onScroll(event){
         if(this.nomore) return window.removeEventListener('scroll',this.onscroll)
         if(document.documentElement.clientHeight + pageYOffset > document.body.scrollHeight - 50){
             this.search(this.keyword,this.page + 1)
-            console.log("songs[5].songname")
+            //console.log("songs[5].songname")
         }
         
     }
@@ -61,7 +65,6 @@ class Search{
             .then(() => this.fetching = false)
             .then(() => this.endLoading())
             .catch(() => this.fetching = false)
-        
     }
 
     append(songs){
@@ -75,7 +78,7 @@ class Search{
                     <p class='song-artist ellipsis'>${song.singer.map(s => s.name).join(" ")}</p> 
                 </a>
             </li>`).join(" ")
-        console.log("songs[1].songname")
+        //console.log("songs[1].songname")
         this.$songs.insertAdjacentHTML('beforeEnd',html)
     }
 

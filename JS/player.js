@@ -1,4 +1,8 @@
-class MusicPlayer{
+import {PragressBar} from './progress-bar.js'
+import {LyricsPlayer} from './lyrics.js'
+
+
+export class MusicPlayer{
     constructor(el){
         this.$el = el
         this.$el.addEventListener('click',this)

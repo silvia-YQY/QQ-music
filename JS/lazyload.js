@@ -1,5 +1,5 @@
-function lazyload(images){
-    let imgs = [].slice.call(images) //Array.from(images) (es6的方法)
+export function lazyload(images){
+    let imgs = [].slice.call(images || document.querySelectorAll('.lazyload')) //Array.from(images) (es6的方法)
 
     if("IntersectionObserver" in window){ 
         //IntersectionObserver方法监听图片距离屏幕的距离
