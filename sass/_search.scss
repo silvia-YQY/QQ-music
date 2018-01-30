@@ -39,7 +39,7 @@
     }
     .search-results{
         position: relative;
-        // height: px(145);
+        //height: calc(100vh - px(140));
         // overflow: scroll;
         
         .song-list{

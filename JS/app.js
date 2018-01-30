@@ -29,6 +29,7 @@ import './resize.js'
 		//window.player = player
 		//window.search =search
 
+		//利用onHashChange监听hash的改变，从未传入参数给player运行play
 		function onHashChange(){
 			let hash = location.hash
 			
