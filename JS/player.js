@@ -8,7 +8,7 @@ export class MusicPlayer{
         this.$el.addEventListener('click',this)
         this.$audio = this.createAudio()
         this.lyrics = new LyricsPlayer(this.$el.querySelector('.player-lyrics'),this.$audio)
-        this.progress = new PragressBar(this.$el.querySelector('.progress'), 10, true)
+        this.progress = new PragressBar(this.$el.querySelector('.progress'), 0, true)
         this.fetching = false
     }
 

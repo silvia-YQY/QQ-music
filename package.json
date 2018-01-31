@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "server": "http-server", 
+    "server": "http-server",
     "dist": "mkdir dist && sass --style compressed ./sass/app.scss:./dist/app.css &&  autoprefixer-cli -o ./dist/app.css  ./dist/app.css && webpack -p"
   },
   "repository": {
