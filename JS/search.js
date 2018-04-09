@@ -12,22 +12,23 @@ export class Search{
         this.nomore = false
         this.onscroll = this.onScroll.bind(this)  
         //绑定this（Search）给onScroll函数，以免下面监听scroll时间更换this（Windows）
-        window.addEventListener('scroll', this.onscroll)    
+        //window.addEventListener('scroll', this.onscroll)    
         //直接监听window的scroll事件会有bug，就是还没有点击搜索的tab，页面也会监听到scroll而运行onScroll函数
-        //this.$el.addEventListener("scroll",this.onscroll)
+        this.$el.addEventListener("scroll",this.onscroll)
         //但是若果指定监听搜索页面，却无法运行。
-        //console.log('ok')
+        //console.log(this.$el)
     }
 
     onkeyUp(event){
         let keyword = event.target.value.trim()
         if(!keyword) return this.reset()
-        if(event.key !== "Enter") return
+        if(event.key !== "Enter" || event.keyCode !== 13) return
         this.search(keyword)
-        //console.log('onkeyUp')
+        // console.log('onkeyUp')
     }
 
     onScroll(event){
+        console.log('asdsafonkeyUp')
         if(this.nomore) return window.removeEventListener('scroll',this.onscroll)
         if(document.documentElement.clientHeight + pageYOffset > document.body.scrollHeight - 50){
             this.search(this.keyword,this.page + 1)

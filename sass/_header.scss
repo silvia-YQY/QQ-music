@@ -2,6 +2,10 @@ body{
 	header{
 		background:$header-background;
 		height:$header-height;
+		position:fixed;
+		width:100%;
+		z-index:200;
+		top:0px;
 
 		img{
 			height:25px;

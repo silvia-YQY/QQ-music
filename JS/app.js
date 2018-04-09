@@ -13,7 +13,7 @@ import './resize.js'
 		let topList = new TopList(document.querySelector('.rank-view')).launch()
 		let recommend = new Recommend(document.querySelector('.rec-view')).launch()
 
-
+		
 		document.querySelector('.show-player').addEventListener('click',()=>{
 			player.show()
 		})
