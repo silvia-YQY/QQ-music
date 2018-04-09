@@ -28,7 +28,7 @@ export class Search{
     }
 
     onScroll(event){
-        console.log('asdsafonkeyUp')
+        //console.log('asdsafonkeyUp')
         if(this.nomore) return window.removeEventListener('scroll',this.onscroll)
         if(document.documentElement.clientHeight + pageYOffset > document.body.scrollHeight - 50){
             this.search(this.keyword,this.page + 1)
